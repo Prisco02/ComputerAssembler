@@ -1,0 +1,69 @@
+﻿<Window x:Class="PCPartPickerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PCPartPickerWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="297*"/>
+            <ColumnDefinition Width="503*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="PCPartPicker" VerticalAlignment="Top" Height="44" FontSize="30" Background="#FF00FF80" FontWeight="Bold" FontStyle="Normal" FontFamily="Bahnschrift SemiBold" Grid.ColumnSpan="2"/>
+        <Label x:Name="TotalPrice" Content="Prezzo Totale:" HorizontalAlignment="Left" Margin="220,11,0,0" VerticalAlignment="Top" FontSize="15" Grid.ColumnSpan="2"/>
+        <Label x:Name="TotalConsumption" Content="Consumo Totale:" HorizontalAlignment="Left" Margin="89,11,0,0" VerticalAlignment="Top" FontSize="15" Grid.Column="1"/>
+        <Button x:Name="Calc" Content="Calcola" HorizontalAlignment="Left" Margin="394,12,0,0" VerticalAlignment="Top" Height="28" Width="99" FontSize="15" RenderTransformOrigin="0.506,0.546" Grid.Column="1"/>
+        <Label Content="CPU" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label Content="MOBO" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label Content="RAM" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label Content="GPU" HorizontalAlignment="Left" Margin="10,196,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label Content="COOLER" HorizontalAlignment="Left" Margin="10,231,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label Content="STORAGE" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label Content="PSU" HorizontalAlignment="Left" Margin="10,301,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label Content="CASE" HorizontalAlignment="Left" Margin="11,336,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Button x:Name="AggiungiCPU" Content="+ Add" HorizontalAlignment="Left" Margin="113,94,0,0" VerticalAlignment="Top" FontSize="15" Width="77" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FF18D320" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Click="AggiungiCPU_Click"/>
+        <Button x:Name="AggiungiMOBO" Content="+ Add" HorizontalAlignment="Left" Margin="113,129,0,0" VerticalAlignment="Top" FontSize="15" Width="77" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FF18D320" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Click="AggiungiMOBO_Click"/>
+        <Button x:Name="AggiungiRAM" Content="+ Add" HorizontalAlignment="Left" Margin="113,164,0,0" VerticalAlignment="Top" FontSize="15" Width="77" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FF18D320" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Click="AggiungiRAM_Click"/>
+        <Button x:Name="AggiungiGPU" Content="+ Add" HorizontalAlignment="Left" Margin="113,198,0,0" VerticalAlignment="Top" FontSize="15" Width="77" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FF18D320" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Click="AggiungiGPU_Click"/>
+        <Button x:Name="AggiungiCOOLER" Content="+ Add" HorizontalAlignment="Left" Margin="113,234,0,0" VerticalAlignment="Top" FontSize="15" Width="77" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FF18D320" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Click="AggiungiCOOLER_Click"/>
+        <Button x:Name="AggiungiSTORAGE" Content="+ Add" HorizontalAlignment="Left" Margin="113,269,0,0" VerticalAlignment="Top" FontSize="15" Width="77" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FF18D320" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Click="AggiungiSTORAGE_Click"/>
+        <Button x:Name="AggiungiPSU" Content="+ Add" HorizontalAlignment="Left" Margin="113,304,0,0" VerticalAlignment="Top" FontSize="15" Width="77" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FF18D320" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Click="AggiungiPSU_Click"/>
+        <Button x:Name="AggiungiCASE" Content="+ Add" HorizontalAlignment="Left" Margin="113,339,0,0" VerticalAlignment="Top" FontSize="15" Width="77" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FF18D320" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Click="AggiungiCASE_Click"/>
+        <Button x:Name="RimuoviCPU" Content="- Remove" HorizontalAlignment="Left" Margin="168,94,0,0" VerticalAlignment="Top" FontSize="15" Width="100" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FFE42222" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Grid.Column="1"/>
+        <Button x:Name="RimuoviMOBO" Content="- Remove" HorizontalAlignment="Left" Margin="168,129,0,0" VerticalAlignment="Top" FontSize="15" Width="100" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FFE42222" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Grid.Column="1"/>
+        <Button x:Name="RimuoviRAM" Content="- Remove" HorizontalAlignment="Left" Margin="168,164,0,0" VerticalAlignment="Top" FontSize="15" Width="100" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FFE42222" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Grid.Column="1"/>
+        <Button x:Name="RimuoviGPU" Content="- Remove" HorizontalAlignment="Left" Margin="168,198,0,0" VerticalAlignment="Top" FontSize="15" Width="100" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FFE42222" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Grid.Column="1"/>
+        <Button x:Name="RimuoviCOOLER" Content="- Remove" HorizontalAlignment="Left" Margin="168,234,0,0" VerticalAlignment="Top" FontSize="15" Width="100" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FFE42222" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Grid.Column="1"/>
+        <Button x:Name="RimuoviSTORAGE" Content="- Remove" HorizontalAlignment="Left" Margin="168,269,0,0" VerticalAlignment="Top" FontSize="15" Width="100" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FFE42222" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Grid.Column="1"/>
+        <Button x:Name="RimuoviPSU" Content="- Remove" HorizontalAlignment="Left" Margin="168,304,0,0" VerticalAlignment="Top" FontSize="15" Width="100" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FFE42222" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Grid.Column="1"/>
+        <Button x:Name="RimuoviCASE" Content="- Remove" HorizontalAlignment="Left" Margin="168,339,0,0" VerticalAlignment="Top" FontSize="15" Width="100" BorderBrush="{x:Null}" Background="{x:Null}" Height="27" Foreground="#FFE42222" FontWeight="Normal" FontFamily="Arial Black" FontStyle="Normal" Grid.Column="1"/>
+        <Label x:Name="CPUlabel" Content="" HorizontalAlignment="Left" Margin="195,91,0,0" VerticalAlignment="Top" Width="265" FontSize="15" Grid.ColumnSpan="2"/>
+        <Label x:Name="MOBOlabel" Content="" HorizontalAlignment="Left" Margin="195,129,0,0" VerticalAlignment="Top" Width="265" FontSize="15" Grid.ColumnSpan="2"/>
+        <Label x:Name="RAMlabel" Content="" HorizontalAlignment="Left" Margin="195,161,0,0" VerticalAlignment="Top" Width="265" FontSize="15" Grid.ColumnSpan="2"/>
+        <Label x:Name="GPUlabel" Content="" HorizontalAlignment="Left" Margin="195,196,0,0" VerticalAlignment="Top" Width="265" FontSize="15" Grid.ColumnSpan="2"/>
+        <Label x:Name="COOLERlabel" Content="" HorizontalAlignment="Left" Margin="195,232,0,0" VerticalAlignment="Top" Width="265" FontSize="15" Grid.ColumnSpan="2"/>
+        <Label x:Name="STORAGElabel" Content="" HorizontalAlignment="Left" Margin="195,266,0,0" VerticalAlignment="Top" Width="265" FontSize="15" Grid.ColumnSpan="2"/>
+        <Label x:Name="PSUlabel" Content="" HorizontalAlignment="Left" Margin="195,302,0,0" VerticalAlignment="Top" Width="265" FontSize="15" Grid.ColumnSpan="2"/>
+        <Label x:Name="CASElabel" Content="" HorizontalAlignment="Left" Margin="195,336,0,0" VerticalAlignment="Top" Width="265" FontSize="15" Grid.ColumnSpan="2"/>
+        <Label x:Name="CPUprice" Content="" HorizontalAlignment="Left" Margin="268,91,0,0" VerticalAlignment="Top" Width="158" FontSize="15" Grid.Column="1"/>
+        <Label x:Name="MOBOprice" Content="" HorizontalAlignment="Left" Margin="268,129,0,0" VerticalAlignment="Top" Width="158" FontSize="15" Grid.Column="1"/>
+        <Label x:Name="RAMprice" Content="" HorizontalAlignment="Left" Margin="268,161,0,0" VerticalAlignment="Top" Width="158" FontSize="15" Grid.Column="1"/>
+        <Label x:Name="GPUprice" Content="" HorizontalAlignment="Left" Margin="268,196,0,0" VerticalAlignment="Top" Width="158" FontSize="15" Grid.Column="1"/>
+        <Label x:Name="COOLERprice" Content="" HorizontalAlignment="Left" Margin="268,232,0,0" VerticalAlignment="Top" Width="158" FontSize="15" Grid.Column="1"/>
+        <Label x:Name="STORAGEprice" Content="" HorizontalAlignment="Left" Margin="268,267,0,0" VerticalAlignment="Top" Width="158" FontSize="15" Grid.Column="1"/>
+        <Label x:Name="PSUprice" Content="" Margin="268,301,77,0" VerticalAlignment="Top" FontSize="15" Grid.Column="1"/>
+        <Label x:Name="CASEprice" Content="" Margin="268,337,77,0" VerticalAlignment="Top" FontSize="15" Grid.Column="1"/>
+        <Button x:Name="ModifyCPU" Content="Modifica" Grid.Column="1" HorizontalAlignment="Left" Margin="431,91,0,0" VerticalAlignment="Top" Height="30" Width="62"/>
+        <Button x:Name="ModifyMOBO" Content="Modifica" Grid.Column="1" HorizontalAlignment="Left" Margin="431,129,0,0" VerticalAlignment="Top" Height="30" Width="62"/>
+        <Button x:Name="ModifyRAM" Content="Modifica" Grid.Column="1" HorizontalAlignment="Left" Margin="431,162,0,0" VerticalAlignment="Top" Height="30" Width="62"/>
+        <Button x:Name="ModifyGPU" Content="Modifica" Grid.Column="1" HorizontalAlignment="Left" Margin="431,195,0,0" VerticalAlignment="Top" Height="30" Width="62"/>
+        <Button x:Name="ModifyCOOLER" Content="Modifica" Grid.Column="1" HorizontalAlignment="Left" Margin="431,230,0,0" VerticalAlignment="Top" Height="30" Width="62"/>
+        <Button x:Name="ModifySTORAGE" Content="Modifica" Grid.Column="1" HorizontalAlignment="Left" Margin="431,265,0,0" VerticalAlignment="Top" Height="30" Width="62"/>
+        <Button x:Name="ModifyPSU" Content="Modifica" Grid.Column="1" HorizontalAlignment="Left" Margin="431,302,0,0" VerticalAlignment="Top" Height="30" Width="62"/>
+        <Button x:Name="ModifyCASE" Content="Modifica" Grid.Column="1" HorizontalAlignment="Left" Margin="431,336,0,0" VerticalAlignment="Top" Height="30" Width="62"/>
+        <Label Content="Warnings:" HorizontalAlignment="Left" Margin="18,383,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="772" Height="41" BorderBrush="Red" Background="#FFF9ADAD"/>
+
+    </Grid>
+</Window>

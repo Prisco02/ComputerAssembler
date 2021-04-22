@@ -1,0 +1,9 @@
+C:\Users\Vincenzo\source\repos\PCshop\PCPartPicker\obj\Debug\netcoreapp3.1\PCPartPicker.csprojAssemblyReference.cache
+C:\Users\Vincenzo\source\repos\PCshop\PCPartPicker\obj\Debug\netcoreapp3.1\PCPartPicker.AssemblyInfoInputs.cache
+C:\Users\Vincenzo\source\repos\PCshop\PCPartPicker\obj\Debug\netcoreapp3.1\PCPartPicker.AssemblyInfo.cs
+C:\Users\Vincenzo\source\repos\PCshop\PCPartPicker\obj\Debug\netcoreapp3.1\PCPartPicker.csproj.CoreCompileInputs.cache
+C:\Users\Vincenzo\source\repos\PCshop\PCPartPicker\bin\Debug\netcoreapp3.1\PCPartPicker.deps.json
+C:\Users\Vincenzo\source\repos\PCshop\PCPartPicker\bin\Debug\netcoreapp3.1\PCPartPicker.dll
+C:\Users\Vincenzo\source\repos\PCshop\PCPartPicker\bin\Debug\netcoreapp3.1\PCPartPicker.pdb
+C:\Users\Vincenzo\source\repos\PCshop\PCPartPicker\obj\Debug\netcoreapp3.1\PCPartPicker.dll
+C:\Users\Vincenzo\source\repos\PCshop\PCPartPicker\obj\Debug\netcoreapp3.1\PCPartPicker.pdb

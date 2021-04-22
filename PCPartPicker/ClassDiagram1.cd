@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PCshop.Component" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAIAAAAQAAAAAAAAAAAAQAACAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Component.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCshop.Cooler" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAEAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Cooler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCshop.AirCooler" Collapsed="true">
+    <Position X="8.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>AirCooler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCshop.Archive" Collapsed="true">
+    <Position X="13" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAgAgQAAAAAAAAAAAEAAAg=</HashCode>
+      <FileName>Archive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCshop.Case" Collapsed="true">
+    <Position X="3.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAABAABAAAAAAAAAAAACA=</HashCode>
+      <FileName>Case.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCshop.Fans" Collapsed="true">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CABgAAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Fans.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCshop.Gpu" Collapsed="true">
+    <Position X="11.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAAAAAAAAAAiAABgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gpu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCshop.Hdd" Collapsed="true">
+    <Position X="12" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAAAAAAAAAA=</HashCode>
+      <FileName>Hdd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCshop.LiquidCooler" Collapsed="true">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LiquidCooler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCshop.Mobo" Collapsed="true">
+    <Position X="2" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAAAQAgAAAA=</HashCode>
+      <FileName>Mobo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCshop.Psu" Collapsed="true">
+    <Position X="14.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Psu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCshop.Ram" Collapsed="true">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAABAAAAAAAAAAAAAAAAAAAAAACAAAAAMAAAAAAAg=</HashCode>
+      <FileName>Ram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCshop.Ssd" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ssd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCshop.Cpu" Collapsed="true">
+    <Position X="16.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAIAAAAAAAAQgAAAAAAAAAQAACACAQAAAAAA=</HashCode>
+      <FileName>Cpu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="PCshop.StandardDimension" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAEAAIAA=</HashCode>
+      <FileName>Component.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
