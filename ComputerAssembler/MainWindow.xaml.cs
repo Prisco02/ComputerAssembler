@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ComputerAssembler.ViewModel;
 
 namespace ComputerAssembler
 {
@@ -59,7 +60,24 @@ namespace ComputerAssembler
 
         private void GitHubButton_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.facebook.com");
+            try
+            {
+                System.Diagnostics.Process.Start("https://github.com/Prisco02/ComputerAssembler");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "IMPOSSIBILE APRIRE BROWSER");
+            }
+        }
+
+        private void AssemblerButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Assembler();
+        }
+
+        private void WarehouseButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Warehouse();
         }
     }
 }

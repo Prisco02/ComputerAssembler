@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vincenzo\\source\\repos\\PCshop\\ComputerAssembler\\ComputerAssembler.csproj": {}
+    "C:\\Users\\Vincenzo\\Documents\\GitHub\\ComputerAssembler\\ComputerAssembler\\ComputerAssembler.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vincenzo\\source\\repos\\PCshop\\ComputerAssembler\\ComputerAssembler.csproj": {
+    "C:\\Users\\Vincenzo\\Documents\\GitHub\\ComputerAssembler\\ComputerAssembler\\ComputerAssembler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vincenzo\\source\\repos\\PCshop\\ComputerAssembler\\ComputerAssembler.csproj",
+        "projectUniqueName": "C:\\Users\\Vincenzo\\Documents\\GitHub\\ComputerAssembler\\ComputerAssembler\\ComputerAssembler.csproj",
         "projectName": "ComputerAssembler",
-        "projectPath": "C:\\Users\\Vincenzo\\source\\repos\\PCshop\\ComputerAssembler\\ComputerAssembler.csproj",
+        "projectPath": "C:\\Users\\Vincenzo\\Documents\\GitHub\\ComputerAssembler\\ComputerAssembler\\ComputerAssembler.csproj",
         "packagesPath": "C:\\Users\\Vincenzo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vincenzo\\source\\repos\\PCshop\\ComputerAssembler\\obj\\",
+        "outputPath": "C:\\Users\\Vincenzo\\Documents\\GitHub\\ComputerAssembler\\ComputerAssembler\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vincenzo\\AppData\\Roaming\\NuGet\\NuGet.Config",

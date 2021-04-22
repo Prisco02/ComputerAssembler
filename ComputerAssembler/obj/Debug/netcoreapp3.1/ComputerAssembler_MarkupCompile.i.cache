@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Vincenzo\source\repos\PCshop\ComputerAssembler\obj\Debug\netcoreapp3.1\
+C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\obj\Debug\netcoreapp3.1\
 ComputerAssembler
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\Vincenzo\source\repos\PCshop\ComputerAssembler\App.xaml
-11407045341
+C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\App.xaml
+3-1421793591
 
-5348603499
+91938352332
 192-1533232326
-MainWindow.xaml;
+MainWindow.xaml;View\Assembler.xaml;View\Warehouse.xaml;
 
 False
 

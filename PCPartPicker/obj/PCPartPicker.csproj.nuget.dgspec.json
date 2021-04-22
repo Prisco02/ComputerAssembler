@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vincenzo\\source\\repos\\PCshop\\PCPartPicker\\PCPartPicker.csproj": {}
+    "C:\\Users\\Vincenzo\\Documents\\GitHub\\ComputerAssembler\\PCPartPicker\\PCPartPicker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vincenzo\\source\\repos\\PCshop\\PCPartPicker\\PCPartPicker.csproj": {
+    "C:\\Users\\Vincenzo\\Documents\\GitHub\\ComputerAssembler\\PCPartPicker\\PCPartPicker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vincenzo\\source\\repos\\PCshop\\PCPartPicker\\PCPartPicker.csproj",
+        "projectUniqueName": "C:\\Users\\Vincenzo\\Documents\\GitHub\\ComputerAssembler\\PCPartPicker\\PCPartPicker.csproj",
         "projectName": "PCPartPicker",
-        "projectPath": "C:\\Users\\Vincenzo\\source\\repos\\PCshop\\PCPartPicker\\PCPartPicker.csproj",
+        "projectPath": "C:\\Users\\Vincenzo\\Documents\\GitHub\\ComputerAssembler\\PCPartPicker\\PCPartPicker.csproj",
         "packagesPath": "C:\\Users\\Vincenzo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vincenzo\\source\\repos\\PCshop\\PCPartPicker\\obj\\",
+        "outputPath": "C:\\Users\\Vincenzo\\Documents\\GitHub\\ComputerAssembler\\PCPartPicker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vincenzo\\AppData\\Roaming\\NuGet\\NuGet.Config",

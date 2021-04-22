@@ -4,12 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ComputerAssembler"
+        xmlns:viewmodel="clr-namespace:ComputerAssembler.ViewModel"
+        xmlns:view="clr-namespace:ComputerAssembler.View"
         mc:Ignorable="d"
         WindowStyle="None"
         Title="ComputerAssembler" Height="400" Width="720"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True">
+    <Window.Resources>
+        <DataTemplate x:Name="AssemblerTemplate" DataType="{x:Type viewmodel:Assembler}">
+            <view:Assembler DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="WarehouseTemplate" DataType="{x:Type viewmodel:Warehouse}">
+            <view:Warehouse DataContext="{Binding}"/>
+        </DataTemplate>
+    </Window.Resources>
     <Border Background="White" CornerRadius="5">
         <Grid>
             <Grid.RowDefinitions>
@@ -39,104 +49,17 @@
 
                     <TextBlock Grid.Column="1" FontSize="25" Grid.ColumnSpan="4" Text="ComputerAssembler" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,1" VerticalAlignment="Stretch" Foreground="White"/>
 
-                    <Button x:Name="WarehouseButton" FontSize="13" Grid.Column="7"  Content="Warehouse" FontFamily="Bahnschrift SemiBold" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
-                    <Button x:Name="GitHubButton" FontSize="13" Grid.Column="8"  Content="GitHub" FontFamily="Bahnschrift SemiBold" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="GitHubButton_Click"/>
+                    <Button x:Name="AssemblerButton" FontSize="13" Grid.Column="6"  Content="Assembler" FontFamily="Bahnschrift SemiBold" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="AssemblerButton_Click"/>
+                    <Button x:Name="WarehouseButton" FontSize="13" Grid.Column="7"  Content="Warehouse" FontFamily="Bahnschrift SemiBold" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="WarehouseButton_Click"/>
+                    <Button x:Name="GitHubButton" FontSize="13" Grid.Column="8"  Content="GitHub" FontFamily="Bahnschrift SemiBold" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="GitHubButton_Click" HorizontalAlignment="Left" Margin="2,0,0,0"/>
 
 
                     <Button x:Name="MinimizeButton" Grid.Column="10" Content="-" FontSize="18" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Fira Code Medium" HorizontalAlignment="Left" Width="20" Click="MinimizeButton_Click"/>
                     <Button x:Name="CloseButton" Grid.Column="11" Content="x" FontSize="18" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Fira Code Medium" Click="CloseButton_Click"/>
                 </Grid>
             </Border>
-           
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="20" />
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="20"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="5"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="20"/>
-                </Grid.RowDefinitions>
-
-                <TextBlock Grid.Column="1" Grid.Row="2" FontSize="15" Text="CPU" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Margin="0,15,10,5"/>
-                <TextBlock Grid.Column="1" Grid.Row="3" FontSize="15" Text="MOBO" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Margin="0,5,10,5"/>
-                <TextBlock Grid.Column="1" Grid.Row="4" FontSize="15" Text="RAM" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Margin="0,5,10,5"/>
-                <TextBlock Grid.Column="1" Grid.Row="5" FontSize="15" Text="GPU" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Margin="0,5,10,5"/>
-                <TextBlock Grid.Column="1" Grid.Row="6" FontSize="15" Text="COOLER" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Margin="0,5,10,5"/>
-                <TextBlock Grid.Column="1" Grid.Row="7" FontSize="15" Text="ARCHIVE" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Margin="0,5,10,5"/>
-                <TextBlock Grid.Column="1" Grid.Row="8" FontSize="15" Text="PSU" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Margin="0,5,10,5"/>
-                <TextBlock Grid.Column="1" Grid.Row="9" FontSize="15" Text="CASE" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Margin="0,5,10,5"/>
-                <TextBlock Grid.Column="1" Grid.Row="10" FontSize="15" Text="FAN" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Margin="0,5,10,5"/>
-
-                <Button x:Name="CPUAdd" Grid.Column="2" Grid.Row="2" Content="+Add" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Bottom" Foreground="#FF28D40D"/>
-                <Button x:Name="MOBOAdd" Grid.Column="2" Grid.Row="3" Content="+Add" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Bottom" Foreground="#FF28D40D"/>
-                <Button x:Name="RAMAdd" Grid.Column="2" Grid.Row="4" Content="+Add" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Bottom" Foreground="#FF28D40D"/>
-                <Button x:Name="GPUAdd" Grid.Column="2" Grid.Row="5" Content="+Add" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Bottom" Foreground="#FF28D40D"/>
-                <Button x:Name="COOLERAdd" Grid.Column="2" Grid.Row="6" Content="+Add" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Bottom" Foreground="#FF28D40D"/>
-                <Button x:Name="ARCHIVEAdd" Grid.Column="2" Grid.Row="7" Content="+Add" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Bottom" Foreground="#FF28D40D"/>
-                <Button x:Name="PSUAdd" Grid.Column="2" Grid.Row="8" Content="+Add" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Bottom" Foreground="#FF28D40D"/>
-                <Button x:Name="CASEAdd" Grid.Column="2" Grid.Row="9" Content="+Add" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Bottom" Foreground="#FF28D40D"/>
-                <Button x:Name="FANAdd" Grid.Column="2" Grid.Row="10" Content="+Add" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Bottom" Foreground="#FF28D40D"/>
-
-                <ComboBox x:Name="CPUComboBox" Grid.Column="3" Grid.Row="2" Width="200" VerticalAlignment="Bottom" FontSize="15" Margin="0,0,0,5"/>
-                <ComboBox x:Name="MOBOComboBox" Grid.Column="3" Grid.Row="3" Width="200" VerticalAlignment="Bottom" FontSize="15" Margin="0,0,0,5"/>
-                <ComboBox x:Name="RAMComboBox" Grid.Column="3" Grid.Row="4" Width="200" VerticalAlignment="Bottom" FontSize="15" Margin="0,0,0,5"/>
-                <ComboBox x:Name="GPUComboBox" Grid.Column="3" Grid.Row="5" Width="200" VerticalAlignment="Bottom" FontSize="15" Margin="0,0,0,5"/>
-                <ComboBox x:Name="COOLERComboBox" Grid.Column="3" Grid.Row="6" Width="200" VerticalAlignment="Bottom" FontSize="15" Margin="0,0,0,5"/>
-                <ComboBox x:Name="ARCHIVEComboBox" Grid.Column="3" Grid.Row="7" Width="200" VerticalAlignment="Bottom" FontSize="15" Margin="0,0,0,5"/>
-                <ComboBox x:Name="PSUComboBox" Grid.Column="3" Grid.Row="8" Width="200" VerticalAlignment="Bottom" FontSize="15" Margin="0,0,0,5"/>
-                <ComboBox x:Name="CASEComboBox" Grid.Column="3" Grid.Row="9" Width="200" VerticalAlignment="Bottom" FontSize="15" Margin="0,0,0,5"/>
-                <ComboBox x:Name="FANComboBox" Grid.Column="3" Grid.Row="10" Width="200" VerticalAlignment="Bottom" FontSize="15" Margin="0,0,0,5"/>
-
-                <Button x:Name="CPURemove" Grid.Column="4" Grid.Row="2" Content="-Remove" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" Foreground="Red" BorderBrush="{x:Null}" VerticalAlignment="Bottom"/>
-                <Button x:Name="MOBORemove" Grid.Column="4" Grid.Row="3" Content="-Remove" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" Foreground="Red" BorderBrush="{x:Null}" VerticalAlignment="Bottom"/>
-                <Button x:Name="RAMRemove" Grid.Column="4" Grid.Row="4" Content="-Remove" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" Foreground="Red" BorderBrush="{x:Null}" VerticalAlignment="Bottom"/>
-                <Button x:Name="GPURemove" Grid.Column="4" Grid.Row="5" Content="-Remove" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" Foreground="Red" BorderBrush="{x:Null}" VerticalAlignment="Bottom"/>
-                <Button x:Name="COOLERRemove" Grid.Column="4" Grid.Row="6" Content="-Remove" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" Foreground="Red" BorderBrush="{x:Null}" VerticalAlignment="Bottom"/>
-                <Button x:Name="ARCHIVERemove" Grid.Column="4" Grid.Row="7" Content="-Remove" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" Foreground="Red" BorderBrush="{x:Null}" VerticalAlignment="Bottom"/>
-                <Button x:Name="PSURemove" Grid.Column="4" Grid.Row="8" Content="-Remove" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" Foreground="Red" BorderBrush="{x:Null}" VerticalAlignment="Bottom"/>
-                <Button x:Name="CASERemove" Grid.Column="4" Grid.Row="9" Content="-Remove" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" Foreground="Red" BorderBrush="{x:Null}" VerticalAlignment="Bottom"/>
-                <Button x:Name="FANARemove" Grid.Column="4" Grid.Row="10" Content="-Remove" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,5" Background="{x:Null}" Foreground="Red" BorderBrush="{x:Null}" VerticalAlignment="Bottom"/>
-
-                <Label x:Name="CPUPrice" Grid.Column="5" Grid.Row="2" Content="Price:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="MOBOPrice" Grid.Column="5" Grid.Row="3" Content="Price:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="RAMPrice" Grid.Column="5" Grid.Row="4" Content="Price:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="GPUPrice" Grid.Column="5" Grid.Row="5" Content="Price:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="COOLPrice" Grid.Column="5" Grid.Row="6" Content="Price:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="ARCHIVEPrice" Grid.Column="5" Grid.Row="7" Content="Price:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="PSUPrice" Grid.Column="5" Grid.Row="8" Content="Price:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="CASEPrice" Grid.Column="5" Grid.Row="9" Content="Price:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="FANPrice" Grid.Column="5" Grid.Row="10" Content="Price:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-
-                <Label x:Name="CPUPower" Grid.Column="6" Grid.Row="2" Content="Power:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="MOBOPower" Grid.Column="6" Grid.Row="3" Content="Power:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="RAMPower" Grid.Column="6" Grid.Row="4" Content="Power:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="GPUPower" Grid.Column="6" Grid.Row="5" Content="Power:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="COOLPower" Grid.Column="6" Grid.Row="6" Content="Power:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="ARCHIVEPower" Grid.Column="6" Grid.Row="7" Content="Power:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="PSUPower" Grid.Column="6" Grid.Row="8" Content="Power:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="CASEPower" Grid.Column="6" Grid.Row="9" Content="Power:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-                <Label x:Name="FANPower" Grid.Column="6" Grid.Row="10" Content="Power:" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="20,0,20,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5"/>
-
-                <Label x:Name="ErrorLabel" Grid.Column="1" Grid.ColumnSpan="6" Grid.Row="11"  Content="Errori Riscontrati: " Background="#FFFDCFCF" Margin="0,10,0,0" FontFamily="Bahnschrift SemiBold" FontSize="14"/>
-            </Grid>
+            <ContentControl Grid.Column="0" Grid.Row="1" Content="{Binding}"/>
+            
         </Grid>
     </Border>
 </Window>
