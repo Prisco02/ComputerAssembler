@@ -10,4 +10,8 @@
     <Folder Include="Image\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PCPartPicker\PCPartPicker.csproj" />
+  </ItemGroup>
+
 </Project>

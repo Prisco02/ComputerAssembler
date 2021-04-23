@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "ComputerAssembler/1.0.0": {
+        "dependencies": {
+          "PCPartPicker": "1.0.0"
+        },
         "runtime": {
           "ComputerAssembler.dll": {}
+        }
+      },
+      "PCPartPicker/1.0.0": {
+        "runtime": {
+          "PCPartPicker.dll": {}
         }
       }
     }
   },
   "libraries": {
     "ComputerAssembler/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PCPartPicker/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -33,15 +33,86 @@
                 <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="CPUMenu" Grid.Row="1" Grid.Column="1" Content="CPU" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
-            <Button x:Name="MOBOMenu" Grid.Row="2" Grid.Column="1" Content="MOBO" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
-            <Button x:Name="RAMMenu" Grid.Row="3" Grid.Column="1" Content="RAM" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
-            <Button x:Name="GPUMenu" Grid.Row="4" Grid.Column="1" Content="GPU" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
-            <Button x:Name="COOLERMenu" Grid.Row="5" Grid.Column="1" Content="COOLER" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
-            <Button x:Name="ARCHIVEMenu" Grid.Row="6" Grid.Column="1" Content="ARCHIVE" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
-            <Button x:Name="PSUMenu" Grid.Row="7" Grid.Column="1" Content="PSU" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
-            <Button x:Name="CASEMenu" Grid.Row="8" Grid.Column="1" Content="CPU" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
-            <Button x:Name="FANMenu" Grid.Row="9" Grid.Column="1" Content="CPU" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
+            <Button x:Name="CPUMenu" Grid.Row="1" Grid.Column="1" Content="CPU" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" Click="CPUMenu_Click" />
+            <Button x:Name="MOBOMenu" Grid.Row="2" Grid.Column="1" Content="MOBO" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" Click="MOBOMenu_Click" />
+            <Button x:Name="RAMMenu" Grid.Row="3" Grid.Column="1" Content="RAM" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" Click="RAMMenu_Click" />
+            <Button x:Name="GPUMenu" Grid.Row="4" Grid.Column="1" Content="GPU" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" Click="GPUMenu_Click" />
+            <Button x:Name="COOLERMenu" Grid.Row="5" Grid.Column="1" Content="COOLER" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" Click="COOLERMenu_Click" />
+            <Button x:Name="ARCHIVEMenu" Grid.Row="6" Grid.Column="1" Content="ARCHIVE" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" Click="ARCHIVEMenu_Click" />
+            <Button x:Name="PSUMenu" Grid.Row="7" Grid.Column="1" Content="PSU" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" Click="PSUMenu_Click" />
+            <Button x:Name="CASEMenu" Grid.Row="8" Grid.Column="1" Content="CASE" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" Click="CASEMenu_Click" />
+            <Button x:Name="FANMenu" Grid.Row="9" Grid.Column="1" Content="FAN" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" Click="FANMenu_Click" />
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <ListView Grid.Column="1" Grid.Row="1" Grid.RowSpan="7"/>
+
+                <Label x:Name="FirstLabel" Grid.Column="2" Grid.Row="1" Content="Nome:" VerticalAlignment="Center"/>
+                <Label x:Name="SecondLabel" Grid.Column="2" Grid.Row="2" Content="Prezzo:" VerticalAlignment="Center"/>
+                <Label x:Name="ThirdLabel" Grid.Column="2" Grid.Row="3" Content="TDP:" VerticalAlignment="Center"/>
+                <Label x:Name="FourthLabel" Grid.Column="2" Grid.Row="4" Content="" VerticalAlignment="Center"/>
+                <Label x:Name="FifthLabel" Grid.Column="2" Grid.Row="5" Content="" VerticalAlignment="Center"/>
+                <Label x:Name="SixthLabel" Grid.Column="2" Grid.Row="6" Content="" VerticalAlignment="Center"/>
+                <Label x:Name="SeventhLabel" Grid.Column="2" Grid.Row="7" Content="" VerticalAlignment="Center"/>
+
+                <TextBox x:Name="FirstTextBox" Grid.Column="3" Grid.Row="1" VerticalAlignment="Center"/>
+                <TextBox x:Name="SecondTextBox" Grid.Column="3" Grid.Row="2" VerticalAlignment="Center"/>
+                <TextBox x:Name="ThirdTextBox" Grid.Column="3" Grid.Row="3" VerticalAlignment="Center"/>
+                <TextBox x:Name="FourthTextBox" Grid.Column="3" Grid.Row="4" VerticalAlignment="Center"/>
+                <TextBox x:Name="FifthTextBox" Grid.Column="3" Grid.Row="5" VerticalAlignment="Center"/>
+                <TextBox x:Name="SixthTextBox" Grid.Column="3" Grid.Row="6" VerticalAlignment="Center"/>
+                <TextBox x:Name="SeventhTextBox" Grid.Column="3" Grid.Row="7" VerticalAlignment="Center"/>
+
+                <Label x:Name="FirstInfoLabel" Grid.Column="4" Grid.Row="1" Content="" VerticalAlignment="Center" FontSize="10"/>
+                <Label x:Name="SecondInfoLabel" Grid.Column="4" Grid.Row="2" Content="" VerticalAlignment="Center" FontSize="10"/>
+                <Label x:Name="ThirdInfoLabel" Grid.Column="4" Grid.Row="3" Content="" VerticalAlignment="Center" FontSize="10"/>
+                <Label x:Name="FourthInfoLabel" Grid.Column="4" Grid.Row="4" Content="" VerticalAlignment="Stretch" FontSize="10"/>
+                <Label x:Name="FifthInfoLabel" Grid.Column="4" Grid.Row="5" Content="" VerticalAlignment="Center" FontSize="10"/>
+                <Label x:Name="SixthInfoLabel" Grid.Column="4" Grid.Row="6" Content="" VerticalAlignment="Center" FontSize="10"/>
+                <Label x:Name="SeventhInfoLabel" Grid.Column="4" Grid.Row="7" Content="" VerticalAlignment="Center" FontSize="10"/>
+            </Grid>
+            
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" x:Name="AddButton" Content="Add" VerticalAlignment="Center" Margin="10,0,10,0"/>
+                <Button Grid.Column="1" x:Name="ModifyButton" Content="Modify" VerticalAlignment="Center" Margin="10,0,10,0"/>
+                <Button Grid.Column="2" x:Name="DeleteButton" Content="Delete" VerticalAlignment="Center" Margin="10,0,10,0"/>
+            </Grid>
+            
         </Grid>
     </Grid>
+
+    
 </UserControl>

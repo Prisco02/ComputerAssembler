@@ -41,3 +41,6 @@ C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\obj\Debug
 C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\obj\Debug\netcoreapp3.1\View\Assembler.baml
 C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\obj\Debug\netcoreapp3.1\View\Warehouse.baml
 C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\obj\Debug\netcoreapp3.1\ComputerAssembler.csprojAssemblyReference.cache
+C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\bin\Debug\netcoreapp3.1\PCPartPicker.dll
+C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\bin\Debug\netcoreapp3.1\PCPartPicker.pdb
+C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\obj\Debug\netcoreapp3.1\ComputerAssembler.csproj.CopyComplete
