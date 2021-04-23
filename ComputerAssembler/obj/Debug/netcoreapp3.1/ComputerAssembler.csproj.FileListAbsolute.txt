@@ -40,3 +40,4 @@ C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\obj\Debug
 C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\obj\Debug\netcoreapp3.1\View\Assembler.baml
 C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\obj\Debug\netcoreapp3.1\View\Warehouse.baml
+C:\Users\Vincenzo\Documents\GitHub\ComputerAssembler\ComputerAssembler\obj\Debug\netcoreapp3.1\ComputerAssembler.csprojAssemblyReference.cache

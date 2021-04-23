@@ -5,8 +5,43 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ComputerAssembler.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="370" d:DesignWidth="720">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="#FF4E86FF">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="CPUMenu" Grid.Row="1" Grid.Column="1" Content="CPU" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
+            <Button x:Name="MOBOMenu" Grid.Row="2" Grid.Column="1" Content="MOBO" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
+            <Button x:Name="RAMMenu" Grid.Row="3" Grid.Column="1" Content="RAM" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
+            <Button x:Name="GPUMenu" Grid.Row="4" Grid.Column="1" Content="GPU" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
+            <Button x:Name="COOLERMenu" Grid.Row="5" Grid.Column="1" Content="COOLER" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
+            <Button x:Name="ARCHIVEMenu" Grid.Row="6" Grid.Column="1" Content="ARCHIVE" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
+            <Button x:Name="PSUMenu" Grid.Row="7" Grid.Column="1" Content="PSU" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
+            <Button x:Name="CASEMenu" Grid.Row="8" Grid.Column="1" Content="CPU" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
+            <Button x:Name="FANMenu" Grid.Row="9" Grid.Column="1" Content="CPU" FontSize="15" FontFamily="Bahnschrift SemiBold" Margin="0,0,0,0" Height="30" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" />
+        </Grid>
     </Grid>
 </UserControl>
