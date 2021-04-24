@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="PCshop.Component" Collapsed="true">
-    <Position X="7.5" Y="1.5" Width="1.5" />
+    <Position X="7.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAIAAAAQAAAAAAAAAAAAQAACAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>Component.cs</FileName>
@@ -22,7 +22,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PCshop.Archive" Collapsed="true">
-    <Position X="13" Y="3.25" Width="1.5" />
+    <Position X="13" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAAAAAAAAAAAAAAAgAgQAAAAAAAAAAAEAAAg=</HashCode>
       <FileName>Archive.cs</FileName>
@@ -35,7 +35,7 @@
       <FileName>Case.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PCshop.Fans" Collapsed="true">
+  <Class Name="PCshop.Fans">
     <Position X="5.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CABgAAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAIAA=</HashCode>
@@ -43,21 +43,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PCshop.Gpu" Collapsed="true">
-    <Position X="11.25" Y="3.25" Width="1.5" />
+    <Position X="11.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAACAAAAAAAAAAiAABgAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Gpu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PCshop.Hdd" Collapsed="true">
-    <Position X="12" Y="4.5" Width="1.5" />
+    <Position X="11" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAAAAAAAAAA=</HashCode>
       <FileName>Hdd.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PCshop.LiquidCooler" Collapsed="true">
-    <Position X="6.5" Y="4.5" Width="1.5" />
+    <Position X="6.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LiquidCooler.cs</FileName>
@@ -70,8 +70,8 @@
       <FileName>Mobo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PCshop.Psu" Collapsed="true">
-    <Position X="14.75" Y="3.25" Width="1.5" />
+  <Class Name="PCshop.Psu">
+    <Position X="14.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Psu.cs</FileName>
@@ -85,13 +85,13 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PCshop.Ssd" Collapsed="true">
-    <Position X="14" Y="4.5" Width="1.5" />
+    <Position X="13.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Ssd.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PCshop.Cpu" Collapsed="true">
+  <Class Name="PCshop.Cpu">
     <Position X="16.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgAIAAAAAAAAQgAAAAAAAAAQAACACAQAAAAAA=</HashCode>
